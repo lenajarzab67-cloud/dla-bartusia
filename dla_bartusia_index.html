@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dla Bartusia 💗</title>
+<style>
+:root{--pink:#d96b9b;--deep:#963b68;--bg:#fff7fb;--soft:#fde8f1;--text:#4b3340}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:linear-gradient(180deg,#fffafd,#fff0f6)}
+main{max-width:850px;margin:auto;padding:18px 16px 55px}
+.card{background:rgba(255,255,255,.94);border:1px solid #f5d5e2;border-radius:28px;padding:26px;margin:18px 0;box-shadow:0 12px 40px rgba(150,59,104,.08)}
+.hero{text-align:center;padding:48px 22px}
+h1{font-size:clamp(38px,9vw,68px);line-height:1.02;color:var(--deep);margin:8px 0 16px}
+h2{color:var(--deep);margin-top:0}
+p{line-height:1.7}
+button{border:0;border-radius:999px;padding:12px 19px;margin:5px;background:var(--pink);color:#fff;font-weight:700;font-size:15px;cursor:pointer}
+button:active{transform:scale(.98)}
+.hidden{display:none}
+.secret{margin-top:14px;background:var(--soft);border-radius:20px;padding:18px;line-height:1.65}
+.timeline{display:grid;gap:12px}
+.event{background:#fff8fb;border-left:4px solid var(--pink);border-radius:15px;padding:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.mini{background:#fff8fb;border-radius:20px;padding:18px}
+.quiz{margin-top:18px}
+.answers button{display:block;width:100%;text-align:left}
+.result{font-weight:800;color:var(--deep);margin-top:12px}
+.bonus{text-align:center;font-size:27px;line-height:1.55}
+.bonus small{font-size:16px}
+.center{text-align:center}
+.pulse{animation:pulse 1.8s infinite}
+@keyframes pulse{50%{transform:scale(1.03)}}
+footer{text-align:center;color:var(--deep);padding-top:8px}
+</style>
+</head>
+<body>
+<main>
+
+<section class="card hero">
+<div>💗 Mała niespodzianka dla Ciebie 💗</div>
+<h1>Dla najlepszego chłopaka na świecie</h1>
+<p style="font-size:24px"><b>Kocham Cię, Bartuś 💋</b></p>
+<p>Twoja Lena 🫶🏼</p>
+<button onclick="go('historia')">Zaczynamy 💗</button>
+</section>
+
+<section id="historia" class="card">
+<h2>Nasza historia 🫂</h2>
+<div class="timeline">
+<div class="event"><b>17.06</b><br>Bartek dodał Lenę na Snapchacie.</div>
+<div class="event"><b>20.06</b><br>Zaczęliśmy pisać codziennie — często aż do późnej nocy.</div>
+<div class="event"><b>A potem…</b><br>Najpierw była przyjaźń, a z czasem naturalnie zmieniła się w miłość. Bez presji i bez pośpiechu — po prostu my.</div>
+</div>
+</section>
+
+<section class="card">
+<h2>Dlaczego Cię kocham? ❤️</h2>
+<p>Kocham Cię za to, jaki jesteś — słodziutki, pomocny, wspierający, troskliwy i przede wszystkim prawdziwy. Kocham Cię za miłość, którą mi dajesz, za to, że jesteś przy mnie każdego dnia i mnie wspierasz.</p>
+<button onclick="toggle('love')">Otwórz moje małe wyznanie 💌</button>
+<div id="love" class="secret hidden">Nawet kiedy dzieli nas odległość, czuję, że jesteś blisko. Możesz zawsze liczyć na moją pomoc, moje wsparcie i moje serce. 💗🫂</div>
+</section>
+
+<section class="card">
+<h2>Wspomnienie, którego nie zapomnę 🫶🏼</h2>
+<p>Kiedy byliśmy jeszcze przyjaciółmi i miałeś kontuzję stopy, bardzo się o Ciebie martwiłam. Chciałam być obok i Ci pomóc, ale dzieliła nas odległość, więc robiłam, co mogłam przez telefon. Wtedy jeszcze mocniej poczułam, jak bardzo mi na Tobie zależy.</p>
+</section>
+
+<section class="card">
+<h2>Ty + piłka ⚽</h2>
+<p>Wiem, jak bardzo kochasz grać w piłkę. Czekam na dzień, kiedy obejrzymy razem mecz na żywo.</p>
+<p><b>Mój najlepszy piłkarz?</b></p>
+<p style="font-size:23px;color:var(--deep)"><b>Ty, skarbie. 😘⚽</b></p>
+</section>
+
+<section class="card">
+<h2>My, nawet na odległość 🌙</h2>
+<p>Na razie dzieli nas odległość, ale wierzę w nas i w nasze wspólne marzenia. Chcę, żeby ta historia trwała dalej. Wierzę, że razem osiągniemy to, o czym marzymy.</p>
+</section>
+
+<section class="card">
+<h2>Otwórz, gdy… 💗</h2>
+<div class="grid">
+<div class="mini"><b>Tęsknisz 🫂</b><br><button onclick="toggle('sad')">Otwórz</button><div id="sad" class="secret hidden">Nawet jeśli nie mogę Cię teraz przytulić, jestem myślami przy Tobie. 🫂</div></div>
+<div class="mini"><b>Potrzebujesz uśmiechu 😘</b><br><button onclick="toggle('smile')">Otwórz</button><div id="smile" class="secret hidden">Mój najlepszy piłkarz to Ty. I koniec dyskusji. ⚽💋</div></div>
+<div class="mini"><b>Masz gorszy dzień ❤️</b><br><button onclick="toggle('hard')">Otwórz</button><div id="hard" class="secret hidden">Nie musisz wszystkiego dźwigać sam. Masz mnie, skarbie. Zawsze możesz na mnie liczyć. 🫶🏼</div></div>
+</div>
+</section>
+
+<section class="card quiz">
+<h2>Mały quiz o nas 😘</h2>
+<p>Sprawdź, ile pamiętasz. A jeśli się pomylisz — spokojnie, sekret i tak się otworzy. 💋</p>
+
+<div class="q" data-correct="20.06">
+<b>1. Kiedy zaczęliśmy pisać codziennie?</b>
+<div class="answers">
+<button onclick="ans(this,'17.06',1)">17.06</button>
+<button onclick="ans(this,'20.06',1)">20.06</button>
+<button onclick="ans(this,'30.06',1)">30.06</button>
+</div></div>
+
+<div class="q" data-correct="przyjaźń">
+<b>2. Od czego zaczęła się nasza historia?</b>
+<div class="answers">
+<button onclick="ans(this,'przyjaźń',2)">Od przyjaźni</button>
+<button onclick="ans(this,'miłość',2)">Od razu od miłości</button>
+<button onclick="ans(this,'nic',2)">Od niczego</button>
+</div></div>
+
+<div class="q" data-correct="piłka">
+<b>3. Co kochasz robić?</b>
+<div class="answers">
+<button onclick="ans(this,'piłka',3)">Grać w piłkę ⚽</button>
+<button onclick="ans(this,'taniec',3)">Tylko tańczyć</button>
+<button onclick="ans(this,'sen',3)">Spać cały dzień</button>
+</div></div>
+
+<p id="score" class="result"></p>
+<button onclick="document.getElementById('quizsecret').classList.remove('hidden')">💌 Pokaż sekret</button>
+<div id="quizsecret" class="secret hidden">Bez względu na wynik quizu: <b>kocham Cię, skarbie. ❤️</b></div>
+</section>
+
+<section class="card">
+<h2>Bon dla nas 🎟️</h2>
+<div class="bonus pulse">🌅 Wschody słońca<br>i<br>🌇 zachody słońca<br><small>do końca naszego wspólnego życia</small></div>
+<p class="center">Do wykorzystania razem, kiedy tylko będziemy mogli być obok siebie. 🫶🏼</p>
+</section>
+
+<section class="card hero">
+<h2>Musi nam się udać.</h2>
+<p style="font-size:26px"><b>Kocham Cię. ❤️</b></p>
+<p style="font-size:20px;letter-spacing:2px"><b>NIE NA LATO. NA LATA.</b></p>
+<p>Twój skarb 💋</p>
+</section>
+
+<footer>17.06 → 20.06 → nasze „my” 💗</footer>
+</main>
+
+<script>
+function toggle(id){document.getElementById(id).classList.toggle('hidden')}
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+const done={}
+function ans(btn,value,n){
+  const q=btn.closest('.q')
+  q.querySelectorAll('button').forEach(b=>b.disabled=true)
+  done[n]=value===q.dataset.correct
+  const score=Object.values(done).filter(Boolean).length
+  document.getElementById('score').textContent='Masz '+score+'/3 poprawnych odpowiedzi. 💗'
+}
+</script>
+</body>
+</html>
